@@ -30,9 +30,18 @@ const angularApp = new AngularNodeAppEngine();
  */
 app.use(
   express.static(browserDistFolder, {
+    immutable: true,
     maxAge: '1y',
     index: false,
     redirect: false,
+    setHeaders: (res, path) => {
+      if (path.endsWith('.html') || path.endsWith('.xml') || path.endsWith('.txt')) {
+        res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        return;
+      }
+
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    },
   }),
 );
 

@@ -1,4 +1,21 @@
 <section class="hero" id="home">
+  <picture class="hero-bg">
+    <source
+      media="(max-width: 768px)"
+      srcset="/images/hero_drone_new-mobile.webp"
+      type="image/webp"
+    />
+    <source srcset="/images/hero_drone_new.webp" type="image/webp" />
+    <img
+      src="/images/hero_drone_new.png"
+      alt=""
+      width="1534"
+      height="1025"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
+
   <div class="hero-inner">
     <div class="hero-content">
       <span class="eyebrow">Precíziós mezőgazdaság</span>
@@ -11,9 +28,13 @@
       </p>
 
       <div class="hero-actions">
-        <a (click)="scrollToSection('contact')" class="primary-btn"> Árajánlat kérése </a>
+        <a href="/#contact" (click)="scrollToSection($event, 'contact')" class="primary-btn">
+          Árajánlat kérése
+        </a>
 
-        <a (click)="scrollToSection('services')" class="secondary-btn"> Szolgáltatások </a>
+        <a href="/#services" (click)="scrollToSection($event, 'services')" class="secondary-btn">
+          Szolgáltatások
+        </a>
       </div>
     </div>
     <!-- <div class="hero-stats">

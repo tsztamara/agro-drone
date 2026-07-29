@@ -70,7 +70,8 @@
   border-radius: 32px;
 
   background:
-    linear-gradient(rgba(38, 51, 29, 0.15), rgba(38, 51, 29, 0.2)), url('/images/about.png');
+    linear-gradient(rgba(38, 51, 29, 0.15), rgba(38, 51, 29, 0.2)),
+    image-set(url('/images/about.webp') type('image/webp'), url('/images/about.png') type('image/png'));
 
   background-size: cover;
   background-position: center;

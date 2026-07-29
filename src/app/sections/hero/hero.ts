@@ -13,7 +13,9 @@ export class Hero {
   readonly Crosshair = Crosshair;
   readonly Clock3 = Clock3;
 
-  scrollToSection(sectionId: string): void {
+  scrollToSection(event: Event, sectionId: string): void {
+    event.preventDefault();
+
     const element = document.getElementById(sectionId);
 
     if (!element) return;

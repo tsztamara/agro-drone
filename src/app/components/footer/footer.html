@@ -1,8 +1,11 @@
 <footer class="footer">
   <div class="footer-content">
     <div class="footer-brand">
-      <a class="logo" (click)="scrollToSection('home')">
-        <img src="/images/GAT_logo.png" alt="GeoAgriTech Logo" />
+      <a class="logo" href="/#home" (click)="scrollToSection($event, 'home')">
+        <picture>
+          <source srcset="/images/GAT_logo.webp" type="image/webp" />
+          <img src="/images/GAT_logo.png" alt="GeoAgriTech Logo" width="324" height="100" loading="lazy" />
+        </picture>
       </a>
 
       <p>Modern drónos permetezési megoldások precíz mezőgazdasági technológiával.</p>
@@ -10,13 +13,13 @@
 
     <div class="footer-links">
       <div class="footer-column">
-        <h4>Menü</h4>
+        <h2>Menü</h2>
 
-        <a (click)="scrollToSection('home')">Főoldal</a>
-        <a (click)="scrollToSection('services')">Szolgáltatások</a>
-        <a (click)="scrollToSection('technology')">Technológia</a>
-        <a (click)="scrollToSection('about')">Rólunk</a>
-        <a (click)="scrollToSection('contact')">Kapcsolat</a>
+        <a href="/#home" (click)="scrollToSection($event, 'home')">Főoldal</a>
+        <a href="/#services" (click)="scrollToSection($event, 'services')">Szolgáltatások</a>
+        <a href="/#technology" (click)="scrollToSection($event, 'technology')">Technológia</a>
+        <a href="/#about" (click)="scrollToSection($event, 'about')">Rólunk</a>
+        <a href="/#contact" (click)="scrollToSection($event, 'contact')">Kapcsolat</a>
         <a href="/adatkezelesi-tajekoztato/" target="_blank" rel="noopener noreferrer">
           Adatkezelési tájékoztató
         </a>
@@ -28,7 +31,7 @@
       </div>
 
       <div class="footer-column">
-        <h4>Kapcsolat</h4>
+        <h2>Kapcsolat</h2>
 
         <span>+36 20 498 2807</span>
         <span>info@geoagritech.hu</span>

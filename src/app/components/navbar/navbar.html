@@ -1,7 +1,10 @@
 <nav class="navbar">
   <div class="navbar-container">
-    <a class="logo" routerLink="/">
-      <img src="/images/GAT_logo.png" alt="GeoAgriTech Logo" />
+    <a class="logo" href="/">
+      <picture>
+        <source srcset="/images/GAT_logo.webp" type="image/webp" />
+        <img src="/images/GAT_logo.png" alt="GeoAgriTech Logo" width="324" height="100" />
+      </picture>
     </a>
 
     <button
@@ -17,23 +20,23 @@
 
     <ul class="nav-menu" [class.active]="isMenuOpen">
       <li>
-        <a (click)="scrollToSection('home')"> Főoldal </a>
+        <a href="/#home" (click)="scrollToSection($event, 'home')"> Főoldal </a>
       </li>
 
       <li>
-        <a (click)="scrollToSection('about')"> Rólunk </a>
+        <a href="/#about" (click)="scrollToSection($event, 'about')"> Rólunk </a>
       </li>
 
       <li>
-        <a (click)="scrollToSection('services')"> Szolgáltatások </a>
+        <a href="/#services" (click)="scrollToSection($event, 'services')"> Szolgáltatások </a>
       </li>
 
       <li>
-        <a (click)="scrollToSection('technology')"> Technológia </a>
+        <a href="/#technology" (click)="scrollToSection($event, 'technology')"> Technológia </a>
       </li>
 
       <li>
-        <a (click)="scrollToSection('contact')"> Kapcsolat </a>
+        <a href="/#contact" (click)="scrollToSection($event, 'contact')"> Kapcsolat </a>
       </li>
     </ul>
 
